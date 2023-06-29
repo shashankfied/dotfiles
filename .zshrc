@@ -1,9 +1,23 @@
 HISTFILE=~/.histfile
-HISTSIZE=50
-SAVEHIST=50
+HISTSIZE=100
+SAVEHIST=100
 bindkey '^a' beginning-of-line
 bindkey '^l' end-of-line
 PROMPT='%B%F{white}%n@%m%f %F{cyan}%~%f %b'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
+alias search='pacman -Ss'
+alias clean='sudo pacman -Rns $(pacman -Qdtq)'
+alias sync='sudo reflector --country india --age 12 --latest>
+alias sync-show='cat /etc/pacman.d/mirrorlist'
+alias screenshot='grim -g "$(slurp)"'
+record() {
+    # Open the first terminal with ffplay in floating mode
+    swaymsg "exec foot -t 'ffplay' -e sh -c 'ffplay -fflags >
+
+    # Open the second terminal with wf-recorder
+    foot -e sh -c 'wf-recorder -a'
+}
