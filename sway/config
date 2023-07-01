@@ -5,7 +5,12 @@
 # Read `man 5 sway` for a complete reference.
 default_border pixel 2
 ### Variables
-#
+#Full screen and Floating mode
+
+for_window [app_id="mpv"] fullscreen
+for_window [app_id="swayimg"] floating enable
+for_window [app_id="ffplay"] floating enable
+
 exec_always autotiling
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -23,11 +28,11 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu wofi --show 
-set $menu bemenu-run -l 10 -p "" --fn JetBrains Mono 20c -H 30 --tb "#285577" --hb "#285577" --tf "#eeeeee" --hf "#eeeeee" --nf "#bbbbbb"
+set $menu bemenu-run -i -l 11 -p "" --fn "JetBrains Mono 14" --line-height 30 --tb "#285577" --hb "#285577" --tf "#eeeeee" --hf "#eeeeee" --nf "#bbbbbb"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /home/shashank/Downloads/original.jpg fill
+#output * bg /home/shashank/Downloads/mountainretreat.jpg fill
 #
 # Example configuration:
 #
